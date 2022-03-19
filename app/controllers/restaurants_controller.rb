@@ -8,12 +8,24 @@ class RestaurantsController < ApplicationController
   end
 
   def new
-  end
-
-  def edit
+    @restaurant = Restaurant.new
   end
 
   def create
+    Restaurant.create(params[:restaurant])
+    #@restaurant = Restaurant.new(restaurant_params)
+  end
+
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.update(params[:restaurant])
+  end
+
+  def destroy
   end
 
 end
