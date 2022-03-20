@@ -7,4 +7,6 @@
   <p><%= restaurant.adress %></p>
   <p><%= "*" * restaurant.stars %></p>
   <%= link_to "Allez voir", restaurant_path(restaurant) %>
+  <%= link_to "delete", restaurant_path(restaurant), method: :delete %>
+  <%= link_to "update", restaurant_path(restaurant), method: :update %>
 <% end %>
